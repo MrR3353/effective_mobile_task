@@ -2,14 +2,14 @@ from datetime import datetime
 from decimal import Decimal
 from typing import Optional, List
 from pydantic import BaseModel
-from models import OrderStatus
+from .models import OrderStatus
 
 
 class ProductBase(BaseModel):
     name: str
     description: Optional[str] = None
     price: Decimal
-    stock = int
+    stock: int
 
 
 class ProductResponse(ProductBase):
@@ -29,10 +29,17 @@ class OrderItemBase(BaseModel):
     quantity: int
 
 
+class OrderItemResponse(OrderItemBase):
+    id: int
+
+    class Config:
+        orm_mode = True
+
+
 class OrderResponse(OrderBase):
     id: int
     created_at: datetime
-    items: List[OrderItemBase] = []
+    items: List[OrderItemResponse] = []
 
     class Config:
         orm_mode = True
