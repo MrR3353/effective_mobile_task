@@ -28,4 +28,5 @@ archive.zip
 
 # macOS
 .DS_Store
-.env
+#.env
+#.env.docker
