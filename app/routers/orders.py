@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from app import schemas, crud
 from app.database import get_db
 from app.models import OrderStatus
-from app.schemas import OrderResponse, OrderItemResponse, OrderItemBase
+from app.schemas import OrderResponse, OrderItemResponse, OrderItemBase, OrderBase
 
 router = APIRouter()
 
@@ -40,6 +40,8 @@ def update_order_status(order_id: int, status: OrderStatus, db: Session = Depend
 @router.post("/{order_id}/items", response_model=OrderItemResponse)
 def add_item_to_order(order_id: int, order_item: OrderItemBase, db: Session = Depends(get_db)):
     try:
+        if order_id != order_item.order_id:
+            raise ValueError("Разные order_id")
         db_order_item = crud.add_order_item(db, order_item)
         return db_order_item
     except ValueError as e:

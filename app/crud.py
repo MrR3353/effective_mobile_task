@@ -66,13 +66,18 @@ def update_order_status(db: Session, order_id: int, status: OrderStatus):
 
 # ORDER_ITEM
 def add_order_item(db: Session, order_item: OrderItemBase):
+    db_order = db.query(Order).filter(Order.id == order_item.order_id).first()
+    db_product = db.query(Product).filter(Product.id == order_item.product_id).first()
+    if db_order is None:
+        raise ValueError("Несуществующий order_id")
+    if db_product is None:
+        raise ValueError("Несуществующий product_id")
     db_order_item = OrderItem(**order_item.dict())
-    product = db.query(Product).filter(Product.id == order_item.product_id).first()
-    if product and product.stock >= order_item.quantity:
-        product.stock -= order_item.quantity
+    if db_product.stock >= order_item.quantity:
+        db_product.stock -= order_item.quantity
         db.add(db_order_item)
         db.commit()
         db.refresh(db_order_item)
     else:
-        raise ValueError(f"Недостаточно товара на складе: {product.name}, {product.stock} < {order_item.quantity}")
+        raise ValueError(f"Недостаточно товара на складе: {db_product.name}, {db_product.stock} < {order_item.quantity}")
     return db_order_item
