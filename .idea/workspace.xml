@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3464bc2e-91ed-4f97-b67a-e842c20fe2af" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,25 +33,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests for test_orders.test_add_item_to_order.executor": "Run",
-    "Python tests.Python tests for test_orders.test_create_order.executor": "Run",
-    "Python tests.Python tests for test_orders.test_get_order.executor": "Run",
-    "Python tests.Python tests for test_orders.test_get_orders.executor": "Run",
-    "Python tests.Python tests for test_orders.test_update_order.executor": "Run",
-    "Python tests.Python tests for test_products.test_create_product.executor": "Run",
-    "Python tests.Python tests for test_products.test_delete_product.executor": "Run",
-    "Python tests.Python tests for test_products.test_get_product.executor": "Run",
-    "Python tests.Python tests for test_products.test_get_products.executor": "Run",
-    "Python tests.Python tests for test_products.test_update_product.executor": "Run",
-    "Python tests.Python tests in test_orders.py.executor": "Run",
-    "Python tests.Python tests in test_products.py.executor": "Run",
-    "Python.common.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/PycharmProjects/effective_mobile_task"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for test_orders.test_add_item_to_order.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_orders.test_create_order.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_orders.test_get_order.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_orders.test_get_orders.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_orders.test_update_order.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_products.test_create_product.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_products.test_delete_product.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_products.test_get_product.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_products.test_get_products.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_products.test_update_product.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_orders.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_products.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.common.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/PycharmProjects/effective_mobile_task&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\PycharmProjects\effective_mobile_task" />
